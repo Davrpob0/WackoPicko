@@ -9,13 +9,7 @@ jobs:
            name: Run FluidAttacks CLI
            id: scan
            with:
-              args: skims scan .
-         - name: Check scan result
-           run: |
-              if [ -f ./result.log ]; then
-                 cat ./result.log
-                 exit 1
-              fi
-           shell: bash
+              args: skims --strict scan .
+         
 
 
